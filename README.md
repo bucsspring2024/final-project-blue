@@ -2,49 +2,59 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
-## CS110 Final Project  << Semester, Year >>
+# Deep Blue !
+## CS110 Final Project  Spring, 2024
 
 ## Team Members
 
-<< List team member names >>
+David Schramm
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
-
+This project creates a game similar to  Brick-Breaker, but ups the challenge by using a single ball which must be kept up with a controlled paddle to destroy all the bricks. If the ball is allowed to touch the ground, the game is lost.
 ***    
 
 ## GUI Design
 
 ### Initial Design
 
-![initial gui](assets/gui.jpg)
+![initial gui](assets/initialballinfo.jpg) 
+- Originally had a stationary cannon shooting multiple balls but ran into troubles with too many interactions, this is initial printed balal values
 
 ### Final Design
 
-![final gui](assets/finalgui.jpg)
+![final gui](assets/BLUE.jpg) 
+![final main menu](assets/mainmenu.jpg)
 
 ## Program Design
-
+- Randomly generate bricks, continuously check for collisions between the ball and bricks or screen and if there are no bricks, end game
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1. Moving objects
+2. Object Collisions
+3. Start Menu
+4. Random brick generation
+5. Win and Loss Condition
 
 ### Classes
-
-- << You should have a list of each of your classes with a description >>
+- "Ball": Handles dynamics of ball in the game
+- "Paddle": Relays player's inputs for paddle movement to interact with ball
+- "Brick": Properties for each brick and their collision handling
 
 ## ATP
 
-| Step                 |Procedure             |Expected Results                   |
-|----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+| Step                 |Procedure                                 |Expected Results                         |
+|----------------------|:---------------------------------------: |----------------------------------------:|
+|  1.                  | Run BLUE program with "python3 main.py". | GUI window appears with title screen    |
+|  2.                  | Press "S" to Start or "Q" to Quit title  | "S" - Screen switches to game screen,   |
+|                      |screen.                                   | bricks, ball, and paddle generated.     |
+|                      |                                          | "Q" - closes window.                    |
+|  3.                  | Move paddle under the ball by pressing   | Paddle moves accordingly with individual|
+|                      | the "right" or "left" arrow keys.        | arrow key press.                        | 
+|  4.                  | When the ball collides with a brick,     | Ball bounces off sides of screen and    |
+|                      | anticipate its path and keep it up with  | paddle. When all bricks are removed(win)|
+|                      | the paddle until all bricks are removed. | window is closed. If ball touches bottom|                        
+|                      |                                          | of screen(loss), window is closed.      |                           
+|                      |                                          |                                         |
